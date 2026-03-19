@@ -1,0 +1,109 @@
+---
+import Navigation from 'src/components/Navigation.astro';
+import Footer from 'src/components/Footer.astro';
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBK Chalmers 25/26</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --navy: #001057;
+            --purple: #9C529B;
+            --red: #CC0000;
+            --orange: #FA6607;
+            --yellow: #FFF313;
+            --white: #ffffff;
+            --light-gray: #f3f4f6;
+            --gray: #7b8290;
+            --gradient-start: #001057;
+            --gradient-end: #FFF313;
+            --brand-gradient: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+        }
+        @font-face {
+            font-family: 'Anklepants';
+            src: url('/fonts/Anklepants.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--white);
+            color: var(--navy);
+        }
+        .font-anklepants {
+            font-family: 'Anklepants', 'Comic Sans MS', cursive;
+            letter-spacing: 0.05em;
+        }
+        .text-navy { color: var(--navy); }
+        .bg-navy { background-color: var(--navy); }
+        .border-navy { border-color: var(--navy); }
+        .text-purple { color: var(--purple); }
+        .bg-purple { background-color: var(--purple); }
+        .border-purple { border-color: var(--purple); }
+        .text-red { color: var(--red); }
+        .bg-red { background-color: var(--red); }
+        .border-red { border-color: var(--red); }
+        .text-orange { color: var(--orange); }
+        .bg-orange { background-color: var(--orange); }
+        .border-orange { border-color: var(--orange); }
+        .text-yellow { color: var(--yellow); }
+        .bg-yellow { background-color: var(--yellow); }
+        .border-yellow { border-color: var(--yellow); }
+        
+        .hero-bg {
+            background-color: var(--gray);
+            background-image: url('/images/media/bakgrund.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .studier-bg {
+            background-color: var(--gray);
+            background-image: url('/images/media/studierinfo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .studentliv-bg {
+            background-color: var(--gray);
+            background-image: url('/images/media/studentliv.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .bildgalleri-bg {
+            background-color: var(--gray);
+            background-image: url('/images/media/bildgalleri.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--navy);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <Navigation />
+    <main class="flex-grow">
+        <slot />
+    </main>
+    <Footer />
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

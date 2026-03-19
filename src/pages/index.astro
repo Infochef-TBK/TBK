@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout>
+    <div class="hero-bg py-64 px-4 text-center text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2" style="background: linear-gradient(to right, var(--purple), var(--red), var(--orange), var(--yellow));"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-anklepants">Tekniskt Basår 25/26</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light">Din start på Chalmers</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/studier" class="bg-orange hover:bg-red-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform hover:-translate-y-1">Schema & Kurser</a>
+                <a href="/studentliv" class="bg-transparent border-2 border-yellow text-white hover:bg-white hover:text-navy font-bold py-4 px-10 rounded-full transition-colors">Om Mottagningen</a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card p-8 border-t-purple">
+                <div class="flex items-center mb-4">
+                    <i data-lucide="bell" class="text-purple mr-2"></i>
+                    <h3 class="font-bold text-2xl font-anklepants text-navy">Nyheter</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="pb-3 border-b border-gray-100">
+                        <span class="text-xs font-bold text-purple">2026-02-01</span>
+                        <p class="font-medium">Mottagningsschemat är publicerat!</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-purple">2026-01-28</span>
+                        <p class="font-medium">Biljettsläpp till Finsittningen.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="/studier" class="card p-8 border-t-red cursor-pointer block">
+                <i data-lucide="calendar" class="w-10 h-10 text-red mb-4"></i>
+                <h3 class="font-bold text-2xl mb-2 font-anklepants text-navy">Schema</h3>
+                <p class="text-gray-600 mb-4">Snabblänkar till TimeEdit för Campus och Distans.</p>
+                <span class="text-red font-bold underline">Gå till schema &rarr;</span>
+            </a>
+            <a href="/studentliv" class="card p-8 border-t-orange cursor-pointer block">
+                <i data-lucide="users" class="w-10 h-10 text-orange mb-4"></i>
+                <h3 class="font-bold text-2xl mb-2 font-anklepants text-navy">Engagera dig</h3>
+                <p class="text-gray-600 mb-4">Sök till TBK eller läs om aspningen.</p>
+                <span class="text-orange font-bold underline">Läs mer &rarr;</span>
+            </a>
+        </div>
+    </div>
+</BaseLayout>
